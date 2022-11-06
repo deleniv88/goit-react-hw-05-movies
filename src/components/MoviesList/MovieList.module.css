@@ -1,0 +1,30 @@
+.movieListContainer {
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    text-align: center;
+}
+
+.movieList {
+    display: grid;
+}
+
+.movieListImg {
+    width: 150px;
+    height: 230px;
+}
+
+.ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    color: black;
+}
+
+ul li a {
+    color: black;
+}

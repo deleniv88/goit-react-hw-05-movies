@@ -1,0 +1,30 @@
+.movieCastReviews{
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ul{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.li:hover {
+    color:brown
+}
+
+.btnBack{
+    margin-left: 20px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    background-color: brown;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btnBack:hover{
+    color:white
+}

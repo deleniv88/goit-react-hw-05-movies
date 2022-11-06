@@ -1,0 +1,25 @@
+.appBar {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-bottom: 1px solid gray;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.appBarMenu{
+    text-decoration: none;
+    background-color: brown;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: 1px solid brown;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.appBarMenu:hover{
+    color: black
+}
+
