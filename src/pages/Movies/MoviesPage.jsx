@@ -1,11 +1,19 @@
-import { MoviesSearchList } from "components/MoviesSearchList/MoviesSearchList";
+// import { MoviesSearchList } from "components/MoviesSearchList/MoviesSearchList";
 import { useEffect } from "react";
-import { useState } from "react"
+import { useState , lazy } from "react"
 import { useSearchParams } from "react-router-dom";
 import { fetchSearch } from '../../services/fetchQuery'
 import css from '../Movies/MoviesPage.module.css';
 // import toast, { Toaster } from 'react-hot-toast';
 import Loader from "components/Loader/Loader";
+
+
+const MoviesSearchList = lazy(() =>
+  import(
+    "../../components/MoviesSearchList/MoviesSearchList" /* webpackChunkName: "SearchBarPage"  */
+  )
+);
+
 
 export default function Movies() {
 
