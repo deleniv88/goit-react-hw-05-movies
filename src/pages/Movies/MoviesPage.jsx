@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useSearchParams } from "react-router-dom";
 import { fetchSearch } from '../../services/fetchQuery'
 import css from '../Movies/MoviesPage.module.css';
-import toast, { Toaster } from 'react-hot-toast';
+// import toast, { Toaster } from 'react-hot-toast';
 import Loader from "components/Loader/Loader";
 
 export default function Movies() {
@@ -74,7 +74,7 @@ export default function Movies() {
                 </div>
             ) : (<h2>Please write the name of film or check is the entered name of film currect</h2>)}
 
-            <Toaster />
+            {/* <Toaster /> */}
         </div>
     )
 }
