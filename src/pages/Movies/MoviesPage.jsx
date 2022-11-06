@@ -1,6 +1,6 @@
 import { MoviesSearchList } from "components/MoviesSearchList/MoviesSearchList";
 import { useEffect } from "react";
-import { useState , lazy } from "react"
+import { useState } from "react"
 import { useSearchParams } from "react-router-dom";
 import { fetchSearch } from '../../services/fetchQuery'
 import css from '../Movies/MoviesPage.module.css';
