@@ -35,7 +35,7 @@ export default function Movies() {
                 });
             } catch (e) {
                 setStatus('rejected');
-                return toast.e('upps')
+                // return toast.e('upps')
             }
         }
         fetchMoviesBySearch()
