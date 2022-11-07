@@ -45,10 +45,10 @@ export default function MoviesDetail() {
             <div className={css.movieCastReviews}>
                 <ul className={css.ul}>
                     <li className={css.li}> 
-                        <Link className={css.li} to='cast'>Cast</Link>
+                        <Link className={css.li} to='cast' state={{from: location.state.from}}>Cast</Link>
                     </li>
                     <li className={css.li}>
-                        <Link className={css.li} to='reviews'>Reviews</Link>
+                        <Link className={css.li} to='reviews' state={{from: location.state.from}}>Reviews</Link>
                     </li>
                 </ul>
 

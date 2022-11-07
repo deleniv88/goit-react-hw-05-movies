@@ -3,14 +3,16 @@ import { useParams } from "react-router";
 import { fetchCast } from "services/fetchCast";
 import Loader from "../Loader/Loader";
 import css from '../Cast/Cast.module.css'
-import defaultImage from '../../default/default-placeholder.png'
+import defaultImage from '../../default/default-placeholder.png';
+import PropTypes from 'prop-types';
 
 export default function Cast(){
-    const IMAGE_PATH = "https://image.tmdb.org/t/p/w500/"
+    const IMAGE_PATH = "https://image.tmdb.org/t/p/w300/";
 
     const { moviesId } = useParams();
     const [cast, setCast] = useState([]);
     const [status, setStatus] = useState('idle');
+
 
     useEffect(() => {
         const fetch = async () => {
@@ -20,7 +22,6 @@ export default function Cast(){
 
                 setStatus('resolved');
                 setCast(fetchMovies.data.cast);
-                console.log(fetchMovies.data.cast);
 
                 window.scrollTo({
                     top: document.documentElement.scrollHeight,
@@ -57,5 +58,16 @@ export default function Cast(){
             </ul>
             {status === 'pending' && <Loader />}
         </div>
+    )
+}
+
+Cast.propTypes = {
+    cast: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            name: PropTypes.string.isRequired,
+            profile_path: PropTypes.string.isRequired,
+            character: PropTypes.string.isRequired
+        })
     )
 }

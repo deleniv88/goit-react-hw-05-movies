@@ -10,8 +10,6 @@ const navItems = [
 export const AppBar = () => {
   return (
     <div className={css.appBar}>
-       {/* <NavLink className={css.appBarMenu} to='/'>Home</NavLink>
-       <NavLink className={css.appBarMenu} to='/movies'>Movies</NavLink> */}
       {navItems.map(({ href, text }) => 
       <NavLink className={css.appBarMenu} to={href} key={href}>{text}</NavLink>)}
     </div>

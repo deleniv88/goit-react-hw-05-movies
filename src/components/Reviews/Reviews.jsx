@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import Loader from "../Loader/Loader";
 import css from '../Reviews/Reviews.module.css'
 import { fetchReviews } from "../../services/fetchReviews";
+import PropTypes from 'prop-types';
 
 export default function Reviews(){
 
@@ -18,7 +19,6 @@ export default function Reviews(){
 
                 setStatus('resolved');
                 setReviews(fetchMovies.data.results);
-                console.log(fetchMovies.data.author);
 
                 window.scrollTo({
                     top: document.documentElement.scrollHeight,
@@ -46,5 +46,15 @@ export default function Reviews(){
             </ul>
             {status === 'pending' && <Loader />}
         </div>
+    )
+}
+
+Reviews.propTypes = {
+    reviews: PropTypes.arrayOf(
+        PropTypes.shape({
+            id: PropTypes.number.isRequired,
+            author: PropTypes.string.isRequired,
+            content: PropTypes.string.isRequired
+        })
     )
 }

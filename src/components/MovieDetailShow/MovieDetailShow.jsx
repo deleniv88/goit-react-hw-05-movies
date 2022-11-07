@@ -1,7 +1,8 @@
-import css from '../MovieDetailShow/MovieDetailShow.module.css'
+import css from '../MovieDetailShow/MovieDetailShow.module.css';
+import PropTypes from 'prop-types';
 
 
-export const MovieDetailShow = ({ movieDetail }) => {
+export const MovieDetailShow = ({ movieDetail}) => {
     const IMAGE_PATH = "https://image.tmdb.org/t/p/w500/";
 
     return (
@@ -14,11 +15,11 @@ export const MovieDetailShow = ({ movieDetail }) => {
                     <p>{movieDetail.overview}</p>
                 </div>
                 <div><b>Genres:</b>
-
+                {/* {movieDetail.genres.map((genre) => (
+                  <li key={genre.id}>{genre.name}</li>
+                ))} */}
                 </div>
             </div>
-
         </div>
-
     )
 }
