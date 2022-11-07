@@ -1,6 +1,4 @@
 import css from '../MovieDetailShow/MovieDetailShow.module.css';
-import PropTypes from 'prop-types';
-
 
 export const MovieDetailShow = ({ movieDetail}) => {
     const IMAGE_PATH = "https://image.tmdb.org/t/p/w500/";
