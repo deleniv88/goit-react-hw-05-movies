@@ -5,9 +5,9 @@ import { AppBar } from "./AppBar/AppBar"
 export const Layout = () => {
     return (
         <div>
-            <AppBar />
             <Suspense fallback={<div>Loading...</div>}>
-            <Outlet />
+                <AppBar />
+                <Outlet />
             </Suspense>
         </div>
     )
