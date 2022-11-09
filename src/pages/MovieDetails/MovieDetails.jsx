@@ -4,11 +4,12 @@ import { useState, useEffect, Suspense } from "react";
 import { Outlet, useLocation, useParams } from "react-router"
 import { fetchMovieById } from "services/fetchMovieById";
 import { Link } from "react-router-dom";
-import css from '../pages/MovieDetails/MovieDetail.module.css'
+import css from 'pages/MovieDetails/MovieDetail.module.css'
 
 export default function MoviesDetail() {
+    
     const { moviesId } = useParams();
-    const [movieDetail, setMovieDetail] = useState([]);
+    const [movieDetail, setMovieDetail] = useState(false);
     const [status, setStatus] = useState('idle');
     const location = useLocation();
     const backLink = location.state?.from ?? '/';
@@ -44,11 +45,11 @@ export default function MoviesDetail() {
             <h2>Additional information</h2>
             <div className={css.movieCastReviews}>
                 <ul className={css.ul}>
-                    <li className={css.li}> 
-                        <Link className={css.li} to='cast' state={{from: location.state.from}}>Cast</Link>
+                    <li className={css.li}>
+                        <Link className={css.li} to='cast' state={{ from: location.state.from }}>Cast</Link>
                     </li>
                     <li className={css.li}>
-                        <Link className={css.li} to='reviews' state={{from: location.state.from}}>Reviews</Link>
+                        <Link className={css.li} to='reviews' state={{ from: location.state.from }}>Reviews</Link>
                     </li>
                 </ul>
 

@@ -12,11 +12,11 @@ export const MoviesSearchList = ({ movieBySearch }) => {
             {movieBySearch.map(({ id, title, poster_path }) => (
                 <li key={id}>
                     <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
-                        <img className={css.movieSearchImg} alt={title} 
-                        src={
-                            poster_path ? 
-                            `${IMAGE_PATH}${poster_path}`
-                        : defaultImage} />
+                        <img className={css.movieSearchImg} alt={title}
+                            src={
+                                poster_path ?
+                                    `${IMAGE_PATH}${poster_path}`
+                                    : defaultImage} />
                         <span>{title}</span>
                     </Link>
                 </li>

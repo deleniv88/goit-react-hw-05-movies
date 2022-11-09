@@ -5,7 +5,7 @@ import css from '../Reviews/Reviews.module.css'
 import { fetchReviews } from "../../services/fetchReviews";
 import PropTypes from 'prop-types';
 
-export default function Reviews(){
+export default function Reviews() {
 
     const { moviesId } = useParams();
     const [reviews, setReviews] = useState([]);
@@ -27,6 +27,7 @@ export default function Reviews(){
 
             } catch (e) {
                 setStatus('rejected');
+                
             }
         }
         fetch()

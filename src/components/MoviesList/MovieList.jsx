@@ -10,7 +10,7 @@ export const MovieList = ({ popularMovies }) => {
             <ul className={css.ul}>
                 {popularMovies.map(({ id, title, poster_path }) => (
                     <li key={id}>
-                        <Link key={id} to={`/movies/${id}`} state={{from:location}}> 
+                        <Link key={id} to={`/movies/${id}`} state={{ from: location }}>
                             <img className={css.movieListImg} alt={title} src={`${IMAGE_PATH}${poster_path}`} />
                             <span>{title}</span>
                         </Link>

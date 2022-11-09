@@ -6,7 +6,7 @@ import css from '../Cast/Cast.module.css'
 import defaultImage from '../../default/default-placeholder.png';
 import PropTypes from 'prop-types';
 
-export default function Cast(){
+export default function Cast() {
     const IMAGE_PATH = "https://image.tmdb.org/t/p/w300/";
 
     const { moviesId } = useParams();

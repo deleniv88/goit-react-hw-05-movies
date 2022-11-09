@@ -35,7 +35,7 @@ export const Home = () => {
     return (
         <div className={css.movieListContainer}>
             <h2>Tranding today</h2>
-            <MovieList popularMovies={popularMovies} />          
+            <MovieList popularMovies={popularMovies} />
             {status === 'pending' && <Loader />}
             <Toaster />
         </div>
