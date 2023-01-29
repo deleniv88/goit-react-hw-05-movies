@@ -2,6 +2,7 @@
     display: flex;
     margin: 0 auto;
     font-family: 'Courier New', Courier, monospace;
+    color: white;
 }
 
 .ul {
@@ -11,6 +12,7 @@
 }
 
 .author {
+    color: white;
     font-weight: bold;
     font-size: 15px;
 }

@@ -5,13 +5,16 @@
     font-family: 'Courier New', Courier, monospace;
     border-bottom: 1px solid gray;
     box-shadow: 10px 5px 5px gray;
+    color: white;
 }
 
 .movieDetailImg {
     width: 250px;
     height: 330px;
+    /* box-shadow: -6px 3px 10px white; */
 }
 
 .movieDetailInfo {
-    margin-left: 20px;
+    background-color: rgb(211,211,211,0.5);
+    padding-left: 20px;
 }

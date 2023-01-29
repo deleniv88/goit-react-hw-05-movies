@@ -1,6 +1,6 @@
 .movieListContainer {
     font-family: 'Courier New', Courier, monospace;
-    color: black;
+    color: white;
     text-align: center;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .movieListImg {
-    width: 150px;
+    width: 160px;
     height: 230px;
 }
 
@@ -22,9 +22,24 @@
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    color: black;
+    color: white;
+}
+
+
+.ul li{
+    background-color: rgb(211,211,211,0.7);
+    border-radius: 5px;
+    padding-bottom: 5px;
+    transition: all .2s ease-in-out;
+    color: white;
+}
+
+
+.ul li:hover{
+    background-color: rgba(244, 7, 90, 0.592);
+    transform: scale(1.2)
 }
 
 ul li a {
-    color: black;
+    color: white;
 }

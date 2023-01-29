@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import css from 'pages/MovieDetails/MovieDetail.module.css'
 
 export default function MoviesDetail() {
-    
+
     const { moviesId } = useParams();
     const [movieDetail, setMovieDetail] = useState(false);
     const [status, setStatus] = useState('idle');
@@ -42,17 +42,19 @@ export default function MoviesDetail() {
             <MovieDetailShow movieDetail={movieDetail} />
             {status === 'pending' && <Loader />}
 
-            <h2>Additional information</h2>
-            <div className={css.movieCastReviews}>
-                <ul className={css.ul}>
-                    <li className={css.li}>
-                        <Link className={css.li} to='cast' state={{ from: location.state.from }}>Cast</Link>
-                    </li>
-                    <li className={css.li}>
-                        <Link className={css.li} to='reviews' state={{ from: location.state.from }}>Reviews</Link>
-                    </li>
-                </ul>
+            <div className={css.addInfo}>
+                <h2 >Additional information</h2>
+                <div className={css.movieCastReviews}>
+                    <ul className={css.ul}>
+                        <li className={css.li}>
+                            <Link to='cast' state={{ from: location.state.from }}>Cast</Link>
+                        </li>
+                        <li className={css.li}>
+                            <Link to='reviews' state={{ from: location.state.from }}>Reviews</Link>
+                        </li>
+                    </ul>
 
+                </div>
             </div>
             <Suspense fallback="null">
                 <Outlet />

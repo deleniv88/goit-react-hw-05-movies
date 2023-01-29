@@ -4,7 +4,7 @@
 }
 
 .castImg {
-    width: 150px;
+    width: 160px;
     height: 230px;
 }
 
@@ -17,7 +17,14 @@
     width: 70%;
     text-align: center;
     margin: 0 auto;
-    color: black;
+    color: white;
+}
+
+.ul li{
+    background-color: rgb(211,211,211,0.7);
+    border-radius: 5px;
+    padding-bottom: 5px;
+    color: white;
 }
 
 ul li a {

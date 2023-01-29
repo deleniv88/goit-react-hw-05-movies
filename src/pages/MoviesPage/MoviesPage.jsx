@@ -72,7 +72,7 @@ export default function Movies() {
                     <MoviesSearchList movieBySearch={movieBySearch} />
                     {status === 'pending' && <Loader />}
                 </div>
-            ) : (<h2>Please write the name of film or check is the entered name of film currect</h2>)}
+            ) : (<h2>Please write the name of film for searching...</h2>)}
 
             <Toaster />
         </div>
